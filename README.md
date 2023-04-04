@@ -1,5 +1,6 @@
 # IKA Tracker for OBS Studio
 - OBS Studioで、Splatoon3のメモリープレーヤーの配信をしているときに、オーバーレイで表示した書き込みから、イカちゃんを追跡するアプリケーションです。
+- 注意：未完成です。
 
 # 使い方
 - OBS
