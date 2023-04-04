@@ -1,0 +1,36 @@
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ika_tracker_obs_splatoon3"
+description = "OBS StudioでSplatoon3のメモリープレーヤーを配信しているときに、イカちゃんのアイコンを追跡するコントローラースクリプトです"
+authors = [
+    {name = "Takumi Ando", email="takumi.ando826@gmail.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "pillow",
+    "numpy",
+    "opencv-python",
+    "obsws_python"
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "ika_tracker.__version__"}
+
+[tools.flake8]
+max-line-length = 120
+
+[project.scripts]
+ika_tracker = "ika_tracker.cli:main"
